@@ -1,4 +1,4 @@
-#------1. R environment------
+#------1. R environment setup------
 #in this section we set up the R environment, install and load the required packages
 
 #1.1 check your R version: 4.0.0 or newer
@@ -122,7 +122,6 @@ plot(resultsPow, actual_values = TRUE)
 # in this section we will:
 #   1. analyze the results of the test 
 #   2. explore the test results
-#   3. improve the model 
 
 
 #3.1 load the test data
