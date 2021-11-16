@@ -4,9 +4,13 @@
 #1.1 check your R version: 4.0.0 or newer
 R.Version
 
-#1.2 install devtools and ausgynth
+#1.2 install devtools and ausgynth and GeoLift
 install.packages("devtools", repos='http://cran.us.r-project.org')
 devtools::install_github("ebenmichael/augsynth")
+devtools::install_github("facebookincubator/GeoLift")
+
+#1.2.1 install other packages
+install.packages(c("tidyverse", "ggplot2", "plotly", "readr","lubridate", "googlesheets4", "knitr", "gsynth","dplyr","doParallel", "MarketMatching"))
 
 #1.3 load all the packages needed
 library(tidyverse)
