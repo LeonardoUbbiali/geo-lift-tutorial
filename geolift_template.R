@@ -2,7 +2,7 @@
 #in this section we set up the R environment, install and load the required packages
 
 #1.1 check your R version: 4.0.0 or newer
-R.Version
+R.Version()
 
 #1.2 install devtools and ausgynth and GeoLift
 install.packages("devtools", repos='http://cran.us.r-project.org')
@@ -73,7 +73,7 @@ resultsNum <- NumberLocations(data = GeoTestData_PreTest,
 #2.6 Market Selection: define which markets will be part of the test group
 resultsSearch <- GeoLiftPower.search(data = GeoTestData_PreTest,
                                      treatment_periods = c(15),
-                                     N = c(2,3,4), #this to be set based on the output of 2.5.1
+                                     N = c(2,3,4), #this to be set based on the output of 2.5
                                      horizon = 50, #defines at which time-stamp the power simulations will start, use ??GeoLiftPower.search for more details 
                                      Y_id = "Y",
                                      location_id = "location",
