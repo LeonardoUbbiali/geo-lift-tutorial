@@ -138,7 +138,7 @@ GeoLift_PostTest<- read_sheet('https://docs.google.com/spreadsheets/d/1tLumoq7oJ
 
 
 
-#2.2 read the data into the proper data.frame format needed 
+#3.2 read the data into the proper data.frame format needed 
 GeoTestData_Test <- GeoDataRead(data = GeoLift_PostTest,
                                 date_id = "date",
                                 location_id = "geo",
@@ -154,7 +154,7 @@ GeoPlot(GeoTestData_Test,
         location_id = "location",
         treatment_start = 91)
 
-#2.3 GeoLift Inference
+#3.3 GeoLift Inference
 
 GeoTest <- GeoLift(Y_id = "Y",
                    data = GeoTestData_Test,
@@ -162,7 +162,7 @@ GeoTest <- GeoLift(Y_id = "Y",
                    treatment_start_time = 91, 
                    treatment_end_time = 105)
 
-#2.4 Results exploration
+#3.4 Results exploration
 
 #summary of the results
 summary(GeoTest)
