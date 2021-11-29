@@ -82,7 +82,9 @@ resultsSearch <- GeoLiftPower.search(data = GeoTestData_PreTest,
                                      alpha = 0.1,
                                      type = "pValue",
                                      fixed_effects = TRUE,
-                                     ProgressBar = TRUE)
+                                     ProgressBar = TRUE
+                                     #,parallel = FALSE for windows users: set this parameter (removing the #) if the function does not work
+                                    )
 
 #top 50 results
 head(resultsSearch,50) 
@@ -99,7 +101,9 @@ resultsFind <- GeoLiftPowerFinder(data = GeoTestData_PreTest,
                                   alpha = 0.1,
                                   fixed_effects = TRUE,
                                   ProgressBar = TRUE,
-                                  plot_best = TRUE)
+                                  plot_best = TRUE
+                                   #,parallel = FALSE for windows users: set this parameter (removing the #) if the function does not work
+                                 )
 
 #MDE list of possible results 
 head(resultsFind,10)
